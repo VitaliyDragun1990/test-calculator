@@ -35,7 +35,7 @@ pipeline {
         stage('Mutation test') {
             steps {
                 sh "./gradlew pitest"
-                publishHTML (target[
+                publishHTML (target: [
                     reportDir: 'build/reports/pitest',
                     reportFiles: 'index.html',
                     reportName: 'Pitest Report'
