@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id 'jacoco'
 	id 'info.solidsoft.pitest' version '1.7.4'
+	id 'checkstyle'
 }
 
 group = 'org.vdrahun'
