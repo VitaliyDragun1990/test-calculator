@@ -3,11 +3,13 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'jacoco'
+	id 'info.solidsoft.pitest' version '1.7.4'
 }
 
 group = 'org.vdrahun'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+compileJava.options.encoding = 'UTF-8'
 
 repositories {
 	mavenCentral()
@@ -30,4 +32,10 @@ jacocoTestCoverageVerification {
 			}
 		}
 	}
+}
+
+pitest {
+	useClasspathFile = true
+	junit5PluginVersion = '0.15'
+	timestampedReports = false
 }
